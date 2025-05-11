@@ -106,16 +106,10 @@ public class M1ProjectTest : MonoBehaviour
         DAMAGE_TYPE defenderWeakness = defender.GetWeakness();
         DAMAGE_TYPE defenderResistance = defender.GetResistance();
         
-
-            if (attackerDamageType == defenderWeakness)
-            {
-                Debug.Log("WEAKNESS");
-            }
-            else if (attackerDamageType == defenderResistance)
-            {
-                Debug.Log("RESIST");
-            }
-        
+        if (attackerDamageType == defenderWeakness)
+            Debug.Log("WEAKNESS");
+        else if (attackerDamageType == defenderResistance)
+            Debug.Log("RESIST");
 
         // Calcolo danno inflitto
         int damage = GameFormulas.CalculateDamage(attacker, defender);
